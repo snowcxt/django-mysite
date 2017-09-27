@@ -5,5 +5,4 @@ from . import api
 urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^question$', api.QuestionApi.as_view()),
-    url(r'^auth/load-auth$', api.load_auth),
 ]
