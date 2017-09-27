@@ -1,8 +1,9 @@
 from django.conf.urls import url
 from . import views
-from .api import QuestionApi
+from . import api
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
-    url(r'^question$', QuestionApi.as_view())
+    url(r'^question$', api.QuestionApi.as_view()),
+    url(r'^auth/load-auth$', api.load_auth),
 ]
